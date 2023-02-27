@@ -3,7 +3,7 @@ on: workflow_call
 
 jobs:
   hello:
-    name: Hello World
+    name: Hello!
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3.3.0
