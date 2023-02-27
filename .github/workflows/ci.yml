@@ -22,4 +22,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          cmp --silent .github/workflows/reusable.yml workflows/reusable.yml || echo "::error::When editing reusable workflows, update both workflows and .github/workflows" && exit 1
+          cmp --silent .github/workflows/reusable.yml workflows/reusable.yml || (echo "::error::When editing reusable workflows, update both workflows and .github/workflows" && exit 1)
