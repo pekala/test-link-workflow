@@ -1,5 +1,5 @@
 {
-  "package": "0.2.0",
+  "package": "0.3.0",
   "terraform": "0.2.0",
-  "workflows": "0.2.0"
+  "workflows": "0.2.1"
 }
