@@ -5,10 +5,12 @@
       "release-type": "node"
     },
     "terraform": {
+      "package-name": "terraform-module",
       "changelog-path": "CHANGELOG.md",
       "release-type": "terraform-module"
     },
     "workflows": {
+      "package-name": "reusable-workflows",
       "changelog-path": "CHANGELOG.md",
       "release-type": "simple"
     }

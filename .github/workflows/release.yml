@@ -16,7 +16,8 @@ jobs:
     name: Run "Release Please"
     runs-on: ubuntu-22.04
     outputs:
-      pkg_published: ${{steps.release.outputs['packages/lambda-deployer--release_created']}}
+      pkg_published: ${{steps.release.outputs['packages/package--release_created']}}
+      workflows_published: ${{steps.release.outputs['packages/workflows--release_created']}}
     steps:
       - uses: google-github-actions/release-please-action@v3.7.4
         id: release
