@@ -1,0 +1,17 @@
+{
+  "packages": {
+    "package": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "node"
+    },
+    "terraform": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "terraform-module"
+    },
+    "workflows": {
+      "changelog-path": "CHANGELOG.md",
+      "release-type": "simple"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}

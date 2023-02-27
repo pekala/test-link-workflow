@@ -1,0 +1,32 @@
+name: Release & Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Run "Release Please"
+    runs-on: ubuntu-22.04
+    outputs:
+      pkg_published: ${{steps.release.outputs['packages/lambda-deployer--release_created']}}
+    steps:
+      - uses: google-github-actions/release-please-action@v3.7.4
+        id: release
+        with:
+          command: manifest
+  publish:
+    name: Pretend publish
+    runs-on: ubuntu-22.04
+    needs: release
+    if: ${{ needs.release.outputs.pkg_published }}
+    defaults:
+      run:
+        working-directory: package
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - uses: actions/setup-node@v3.6.0
+        with:
+          node-version: "16.x"
+      - run: npm pkg
